@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    div {
+      margin: 0 auto;
+      width: fit-content;
+      background: blueviolet;
+      padding: 10px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      color: white;
+    }
+    ol {
+      font-size: 24px;
+    }
+    label {
+      padding: 5px;
+    }
+    input {
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      outline: none;
+      border-color: rgb(79, 53, 112);
+      box-shadow: 0 0 5px rgba(0,0,255,0.5);
+    }
+
+  </style>
+
+  <body>
+    <div>
+      <h1>Мои заметки</h1>
+      <label>
+        <input id="inp"/>
+        <button id="add">Сохранить</button>
+      </label>
+
+      <label>
+        <input id="inp2"/>
+        <button id="del">Удалить</button>
+      </label>
+
+      <ol id="notes">
+        <li>Пронуться в 8</li>
+        <li>Сделать зарядку</li>
+
+      </ol>
+    </div>
+  </body>
+
+  <script>
+
+    let add = document.getElementById("add")
+    let del = document.getElementById("del")
+    let notes = document.getElementById("notes")
+    let arr = ['Test1','Test2']
+
+    function generateNote() {
+      notes.innerHTML=""
+      for (let i = 0; i < arr.length; i++) {
+        notes.innerHTML += `<li>${arr[i]}</li>`
+      }
+    }
+    function addNote(a) {
+      arr.push(a)
+    }
+    function delNote(a) {
+      arr.splice(a-1,1)
+    }
+
+    let inp = document.getElementById('inp')
+    inp.addEventListener('input', (e) => {
+      e.target.value = e.target.value.toUpperCase();
+    });
+
+    add.addEventListener('click',function() {
+      let inp = document.getElementById("inp")
+      addNote(inp.value)
+      generateNote();
+    })
+    del.addEventListener('click', function() {
+      let inp2 = document.getElementById("inp2")
+      delNote(+inp2.value);
+      generateNote();
+    })
+    
+    generateNote();
+  </script>
+
+</html>
+
+
+<!--
+<script>
+    let btn = document.getElementById("btn");
+    function change() {
+      let p = document.getElementById("p");
+      let inp = document.getElementById("inp");
+      p.innerHTML += inp.value;
+    }
+    inp.addEventListener("input", change);
+  </script>
+-->

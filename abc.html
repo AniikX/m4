@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <!-- <div class="card">
+      <img src="https://shar-online24.ru/image/cache/catalog/falgirovannue/shargadkijjaminondejv81sm-700x700.jpg"/>
+      <h2>Описание</h2>
+      <p>10000</p>
+    </div> -->
+  </body>
+  <script>
+    let card = [
+      {
+        img: "https://static.insales-cdn.com/images/products/1/7218/329129010/1._%D0%BC%D0%B8%D0%BD%D1%8C%D0%BE%D0%BD_618%D1%85850_%D0%BC%D0%BC.jpg",
+        title: "описание1",
+        price: "5000",
+      },
+      {
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD5YDNF3XixUdDQSgH9SFW0oINcZMLeZ_yy_t72NH3pA&s",
+        title: "описани2",
+        price: "2000",
+      },
+    ];
+
+    let body = document.getElementById('body')
+    for (let el of card) {
+      body.innerHTML += `<div class="card">
+        <img src="${el.img}"/>
+        <h2>${el.title}</h2>
+        <p>${el.price}</p>
+        </div>`
+    }
+  </script>
+</html>
