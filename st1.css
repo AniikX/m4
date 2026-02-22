@@ -3,5 +3,47 @@
     margin: 0;
 }
 body {
-    background: rgb(162, 227, 171);
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+.btn {
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 40px;
+    color: rgb(41, 90, 54);
+    background: pink;
+    border: 2px solid rgb(41, 90, 54);
+    transition: all 0.5s;
+}
+.btn:hover {
+    background: rgb(41, 90, 54);
+    color: pink;
+}
+.title {
+    font-size: 50px;
+    color: rgb(41, 90, 54);
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+    ;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+#result {
+    font-size: 30px;
+    color: rgb(41, 90, 54);
+}
+.close {
+    display: none !important;
 }
