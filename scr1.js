@@ -42,9 +42,23 @@ function generate() {
     }
     main.innerHTML += `<nav>${block}</nav>`
 }
+
+function stop() {
+    start.classList.remove('close')
+    main.classList.add('close')
+    result.classList.remove('close')
+    result.innerHTML = `Решено ${cnt} из ${quests.length}`
+    generate()
+}
+
 function check(ans) {
     let correct =  quests[cur].correct
     if (correct == ans) cnt++
     cur++
-    generate()
+    if (cur < quests.length) {
+        generate()
+    } else {
+        stop()
+    }
+    
 }
