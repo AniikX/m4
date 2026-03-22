@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background: #FBCBC1;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.sakura-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 70vh;
+    background: url('./sakura-4 1.svg') no-repeat top right;
+    background-size: contain;
+    z-index: 1;
+}
+
+.main-title {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 2;
+}
+
+.main-title h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-title .subtitle {
+    font-size: 2rem;
+    font-style: italic;
+    color: #000;
+    margin-left: 10px;
+}
+
+.center-section {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.all-about {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.category {
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #C71585;
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: #FF1493;
+}
+
+.category-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.category-details {
+    list-style: none;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    padding-left: 0;
+}
+
+.category-details li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    position: relative;
+    padding-left: 20px;
+}
+
+.category-details li:before {
+    content: "•";
+    color: #C71585;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.category-details li:last-child {
+    border-bottom: none;
+}
+
