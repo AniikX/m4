@@ -8,16 +8,17 @@ for (let i of carusel.children) {
     i.style.minWidth = `${width}%`
 }
 
-let cnt_item = carusel.children.length
+let cnt_item = carusel.children.length -carusel_elem
 let cur = 0
 btn_right.addEventListener("click",Right)
 function Right() {
     cur += 1
-    cur %= cnt_item
+    cur %= (cnt_item+1)
     carusel.style.transform = `translateX(-${width*cur}%)`
 }
 btn_left.addEventListener("click",Left)
 function Left() {
     cur -= 1
+    if (cur < 0) cur = cnt_item
     carusel.style.transform = `translateX(-${width*cur}%)`
 }
