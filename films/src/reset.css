@@ -16,3 +16,17 @@ img {
     width: 100%;
     height: 100%;
 }
+
+body {
+    background: #0d0909;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    background: #0d0909;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e68266;
+}
