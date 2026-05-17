@@ -2,7 +2,7 @@
   <section>
     <h1>Jujutsu Kaisen</h1>
     <img
-      src=".../img/fon.jpg"
+      src="../img/fon.jpg"
     />
     <p>aaaaaaaaaaaaaaaaa</p>
   </section>

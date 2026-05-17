@@ -1,14 +1,45 @@
+<script setup>
+defineProps({
+  card: Object,
+})
+</script>
+
+
 <template>
-  <section>
-    <h1>Jujutsu Kaisen</h1>
+  <div>
     <img
-        src=""
+        :src="card.img"
     />
     <nav>
-        <h2>1 сезон</h2>
-        <p>
-            bbbbbbbbbbb
+        <h2>{{ card.title }}</h2>
+        <p v-html="card.desc">
         </p>
     </nav>
-  </section>
+  </div>
 </template>
+
+<style scoped>
+div {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 3fr;
+}
+img {
+  aspect-ratio:  9/16;
+  object-fit: cover;
+  border-radius: 16px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+h2 {
+  font-size: 40px;
+}
+p {
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: justify;
+}
+</style>
