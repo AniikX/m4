@@ -15,7 +15,7 @@ header {
     margin: 40px 0;
     border-radius: 50px;
     font-size: 25px;
-    color: white;
-    background: #45342c;
+    color: #e0e0e0;
+    background: #111116;
 }
 </style>

@@ -18,15 +18,21 @@ img {
 }
 
 body {
-    background: #0d0909;
-    color: white;
+    background: #0a0a0c;
+    color: #e0e0e0;
 }
 
 ::-webkit-scrollbar {
-    background: #0d0909;
-    width: 5px;
+    background: #111116;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e68266;
+    background: #4a4a5a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a6a7a;
 }
